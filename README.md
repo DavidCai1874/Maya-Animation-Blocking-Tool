@@ -25,7 +25,7 @@ Create a window that generates gear in Autodest Maya
 
 
 # Demo on Youtube
-[![Watch on YouTube](https://youtu.be/yFxr4EYzWKU/0.jpg)](https://youtu.be/yFxr4EYzWKU)
+[![Watch on YouTube](https://img.youtube.com/vi/yFxr4EYzWKU/0.jpg)](https://youtu.be/yFxr4EYzWKU)
 
 #### Just in case
 code is here
