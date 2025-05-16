@@ -11,6 +11,9 @@
 4. 运行
 <img width="676" alt="Run Code" src="https://github.com/user-attachments/assets/89ba9ae6-55d6-4dbe-a9c0-b7c715078c7e">
 
+# 工具面板
+![{84516F46-B160-4E3B-9D49-61BB17E80505}](https://github.com/user-attachments/assets/40c64b9c-cbc5-4649-a44e-444c5fdf0304)
+
 
 # 演示视频(Youtube)
 [![Watch on YouTube](https://youtu.be/yFxr4EYzWKU/0.jpg)](https://youtu.be/yFxr4EYzWKU)
