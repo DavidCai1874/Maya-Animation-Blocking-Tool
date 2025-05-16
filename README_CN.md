@@ -1,33 +1,22 @@
-# Maya-Gear-Creator
-Create a window that generates gear in Autodest Maya
-
-
-中文版可以移步这里/ Here's the instructions in Chinese:[点击这里查看中文文档](README_CN.md)
-
-***
-
-# How To Use
-1. Open Maya.
-2. Click on the lower right corner to call up the script editor window.
+# 如何使用
+1. 开启maya
+2. 点击右下角唤出代码窗口
 <img width="25" alt="Code Editor Icon" src="https://github.com/user-attachments/assets/3db8f240-13cc-4308-8bc9-3ad32263e2a7">
 
 
-3. Select type as Python and paste the code in 'animation_blocking_v10.py'.
+3. 选择python并且粘贴 'animation_blocking_v10.py' 文件中的代码
 <img width="677" alt="Python Tab" src="https://github.com/user-attachments/assets/90c3cca5-ac1b-4eab-b2de-7ed437635c0e">
 
 
-4. Run the code.
+4. 运行
 <img width="676" alt="Run Code" src="https://github.com/user-attachments/assets/89ba9ae6-55d6-4dbe-a9c0-b7c715078c7e">
 
-# Tool Panel
 
-
-
-# Demo on Youtube
+# 演示视频(Youtube)
 [![Watch on YouTube](https://youtu.be/yFxr4EYzWKU/0.jpg)](https://youtu.be/yFxr4EYzWKU)
 
-#### Just in case
-code is here
+#### 以防万一
+代码在此
 ```
 
 import maya.cmds as cmds
@@ -313,5 +302,3 @@ build_blocking_ui()
 
 ```
 
-
- 
