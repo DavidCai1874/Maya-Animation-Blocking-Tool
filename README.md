@@ -21,6 +21,7 @@ Create a window that generates gear in Autodest Maya
 
 # Tool Panel
 
+![{84516F46-B160-4E3B-9D49-61BB17E80505}](https://github.com/user-attachments/assets/baa65dc4-c4c4-41fe-bf18-90b9e0ca58c1)
 
 
 # Demo on Youtube
