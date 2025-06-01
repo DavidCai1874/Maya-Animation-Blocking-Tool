@@ -235,30 +235,27 @@ def set_spline_tangent(attr_full):
 
 
 #* /////////////////////////////////// UI Window
-
 def build_blocking_ui():
-    if cmds.window("blockingWin", exists=True):
-        cmds.deleteUI("blockingWin")
+    if cmds.workspaceControl("blockingWorkspace", exists=True):
+        cmds.deleteUI("blockingWorkspace", control=True)
 
-    #Main Window
-    cmds.window("blockingWin", title="Animation Blocking Tool", widthHeight=(320, 800))
-    cmds.window("blockingWin", edit=True, widthHeight=(350, 550))
+    workspace = cmds.workspaceControl("blockingWorkspace", label="Animation Blocking Tool", retain=False)
+    cmds.setParent(workspace)
+    
     cmds.columnLayout(adjustableColumn=True, rowSpacing=5)
 
-
-    #attibutes
+    # attributes
     cmds.text(label="Select Attributes:")
     cmds.rowColumnLayout(numberOfColumns=3, columnWidth=[(1, 100), (2, 100), (3, 100)])
     for attr in ATTRIBUTES:
         checkbox_dict[attr] = cmds.checkBox(label=attr, value=True)
     cmds.setParent("..")
-    #Selections
+    # Selections
     cmds.rowLayout(numberOfColumns=2, columnWidth2=(140, 140), adjustableColumn=True)
     cmds.button(label="Select All", command=lambda *_: set_all_checkboxes(True))
     cmds.button(label="Deselect All", command=lambda *_: set_all_checkboxes(False))
     cmds.setParent("..")
     cmds.separator(height=10, style="in")
-
 
     # Types (Collapsible Section)
     cmds.frameLayout(label="Object Types Filter", collapsable=True, collapse=True, marginHeight=5, marginWidth=5)
@@ -267,41 +264,30 @@ def build_blocking_ui():
     cmds.button(label="Detect Types in Selection", command=update_object_types)
     cmds.button(label="Restore Types", command=restore_object_types)
     cmds.setParent("..")
-    
     cmds.text(label="Step 2: Choose Types to Include:")
     for typ in all_types:
         type_filter_checkboxes[typ] = cmds.checkBox(label=typ, value=True, enable=False)
     cmds.setParent("..")  # Exit frameLayout
 
     cmds.separator(height=10, style="in")
-    
+
     # Frame Range
     cmds.text(label="Set Frame Range: [Press Enter to Apply Changes]")
-    
-    
-    cmds.intFieldGrp("frameRangeField", numberOfFields=2, label="Start/End", value1= 1, value2= 120,
+    cmds.intFieldGrp("frameRangeField", numberOfFields=2, label="Start/End", value1=1, value2=120,
                      changeCommand=update_frame_range)
     cmds.rowLayout(numberOfColumns=2, adjustableColumn=2)
     cmds.button(label="Set to Playback Range", command=lambda *_: set_to_playback_range())
     cmds.button(label="Set to Animation Range", command=lambda *_: set_to_animation_range())
     cmds.setParent("..")
 
-
-    
     cmds.separator(height=10, style="in")
-    
-    # Block / 
+
+    # Block / Spline
     cmds.button(label="Apply Blocking", height=40, command=lambda *_: apply_blocking_to_selected())
     cmds.button(label="Convert to Spline", height=40, command=lambda *_: apply_spline_to_selected())
-
-    cmds.showWindow("blockingWin")
-
-
 
 
 
 
 build_blocking_ui()
-
-```
 
